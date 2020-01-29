@@ -66,6 +66,8 @@ const vm = new Vue({
     },
     preVote(e) {
       this.currentMemberId = e.currentTarget.getAttribute('data-member-id')
+      this.currentMemberTecPoint = this.currentMemberData.tecPoint
+      this.currentMemberServicePoint = this.currentMemberData.servicePoint
       this.isModal = true
     },
     closeModal() {
