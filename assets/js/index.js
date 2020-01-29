@@ -14,7 +14,30 @@ firebase.initializeApp(firebaseConfig);
 const vm = new Vue({
   el: '#app',
   data: {
-    
+    projectName: 'Frontend#3',
+    activePageName: 'vote',
+    icons: [
+      {
+        className: 'fa-vote-yea',
+        text: 'vote'
+      },
+      {
+        className: 'fa-list-ol',
+        text: 'list'
+      },
+      {
+        className: 'fa-id-card',
+        text: 'detail'
+      },
+      {
+        className: 'fa-user-edit',
+        text: 'edit'
+      },
+      {
+        className: 'fa-door-open',
+        text: 'logout'
+      },
+    ],
   },
 
   created(){
@@ -30,6 +53,9 @@ const vm = new Vue({
   },
 
   methods: {
-    
+    navClick(e) {
+      this.activePageName = e.currentTarget.getAttribute('data-icon-text')
+      console.log(this.activePageName)
+    }
   }
 })

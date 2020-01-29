@@ -11,7 +11,25 @@
 </head>
 <body>
   <div id="app">
- 
+    <!------------------------------------------ 
+      header
+    ------------------------------------------->
+    <header class="navbar navbar-dark bg-dark flex-column flex-md-row shadow mb-5">
+      <a href="" class="navbar-brand">{{ projectName }}<span></span></a>
+      <ul class="nav justify-content-end">
+        <li class="nav-item global" 
+          :class="{ active: activePageName === icon.text}"
+          v-for="icon in icons"
+          v-bind:key="icon.className + icon.text"
+          v-bind:data-icon-text ="icon.text"
+          v-on:click.stop="navClick($event)"
+        >
+          <a class="nav-link" href="#">
+            <i class="fas" v-bind:class="icon.className"></i>
+            <span>{{ icon.text }}</span></a>
+        </li>
+      </ul>
+    </header>
   </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
