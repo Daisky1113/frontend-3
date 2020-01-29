@@ -71,8 +71,8 @@
                   <figure><img v-bind:src="'./assets/img/img' + member.id + '.jpg'" alt=""></figure>
                   <span class="user-name">{{ member.name }}</span>
                 </td>
-                <td>{{ member.tecPoint }}</td>
-                <td>{{ member.servicePoint }}</td>
+                <td>{{ member.tecPoint | numberToRate}}</td>
+                <td>{{ member.servicePoint | numberToRate }}</td>
                 <td><i class="fas fa-pencil-alt"></i></td>
               </tr>
             </tbody>
