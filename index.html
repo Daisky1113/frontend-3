@@ -73,7 +73,10 @@
                 </td>
                 <td>{{ member.tecPoint | numberToRate}}</td>
                 <td>{{ member.servicePoint | numberToRate }}</td>
-                <td><i class="fas fa-pencil-alt"></i></td>
+                <td><i　
+                  v-bind:data-member-id="member.id"
+                  v-on:click="preVote($event)"
+                  class="fas fa-pencil-alt"></i　:></td>
               </tr>
             </tbody>
           </table>
