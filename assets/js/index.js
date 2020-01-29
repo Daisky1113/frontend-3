@@ -50,7 +50,7 @@ const vm = new Vue({
       serviceInvention: '',
       improvement: '',
     },
-    maxLength: 140
+    maxLength: 10
   },
 
   created(){
