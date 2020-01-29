@@ -65,14 +65,14 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">0</th>
+              <tr v-for="member in members" v-bind:key="member.name + member.id">
+                <th scope="row">{{ member.id }}</th>
                 <td class="d-flex align-items-center">
-                  <figure><img src="./assets/img/img0.jpg" alt=""></figure>
-                  <span class="user-name">Daisky</span>
+                  <figure><img v-bind:src="'./assets/img/img' + member.id + '.jpg'" alt=""></figure>
+                  <span class="user-name">{{ member.name }}</span>
                 </td>
-                <td>3</td>
-                <td>3</td>
+                <td>{{ member.tecPoint }}</td>
+                <td>{{ member.servicePoint }}</td>
                 <td><i class="fas fa-pencil-alt"></i></td>
               </tr>
             </tbody>
