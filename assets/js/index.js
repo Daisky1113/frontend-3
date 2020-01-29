@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 const vm = new Vue({
   el: '#app',
   data: {
-    
+    projectName: 'Frontend#3'
   },
 
   created(){
