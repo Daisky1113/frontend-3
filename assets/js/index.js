@@ -48,7 +48,9 @@ const vm = new Vue({
   },
 
   computed: {
-    
+    currentMemberData: function() {
+      return this.members.find(member => member.id == this.currentMemberId)
+    }
   },
 
   filters: {
