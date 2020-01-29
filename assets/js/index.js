@@ -49,7 +49,8 @@ const vm = new Vue({
       techInvention: '',
       serviceInvention: '',
       improvement: '',
-    }
+    },
+    maxLength: 140
   },
 
   created(){
