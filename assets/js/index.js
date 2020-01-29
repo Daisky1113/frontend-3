@@ -38,6 +38,8 @@ const vm = new Vue({
         text: 'logout'
       },
     ],
+    members: data,
+    currentMemberId:0,
   },
 
   created(){
@@ -56,6 +58,10 @@ const vm = new Vue({
     navClick(e) {
       this.activePageName = e.currentTarget.getAttribute('data-icon-text')
       console.log(this.activePageName)
+    },
+    preVote(e) {
+      this.currentMemberId = e.currentTarget.getAttribute('data-member-id')
+      console.log(this.currentMemberId)
     }
   }
 })

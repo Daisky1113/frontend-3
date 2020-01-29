@@ -30,6 +30,24 @@
         </li>
       </ul>
     </header>
+    <!-------------------------
+      vote 
+    -------------------------->
+    <div class="container">
+      <div class="row">
+        <div v-for="member in members" v-bind:key="member.name + member.id" class="text-dark rounded mb-4 modal-in-box product-info-box col-lg-3">
+          <div class="info-detail u-box-shadow-sm bg-white text-center rounded p-4 product-card">
+            <figure class="mb-2"><img v-bind:src="'./assets/img/img'+ member.id + '.jpg'" alt="" class="img-fluid  rounded-circle mt-1">
+            </figure>
+            <div class="text-area">
+              <p>{{ member.name }}</p>
+              <p class="portfolio-url"></p>
+            </div>
+            <button v-on:click="preVote($event)" :data-member-id="member.id" type="button" class="btn btn-sm btn-outline-success">投票する</button>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
