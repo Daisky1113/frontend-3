@@ -42,7 +42,15 @@ const vm = new Vue({
     currentMemberId: 0,
     currentMemberTecPoint: 3,
     currentMemberServicePoint: 3,
-    isModal: false
+    isModal: false,
+    workDetail: {
+      url: '',
+      github: '',
+      techInvention: '',
+      serviceInvention: '',
+      improvement: '',
+    },
+    maxLength: 10
   },
 
   created(){
@@ -52,6 +60,18 @@ const vm = new Vue({
   computed: {
     currentMemberData: function() {
       return this.members.find(member => member.id == this.currentMemberId)
+    },
+    tecInventionLength: function () {
+      return this.workDetail.techInvention.length
+    },
+    serviceInventionLength: function () {
+      return this.workDetail.serviceInvention.length
+    },
+    improvementLength: function () {
+      return this.workDetail.improvement.length
+    },
+    textLengthStatus: function () {
+      return [this.tecInventionLength,this.serviceInventionLength,this.improvementLength].some(strLength => strLength > this.maxLength)
     }
   },
 
@@ -80,6 +100,9 @@ const vm = new Vue({
     },
     closeModal() {
       this.isModal = false
+    },
+    sendWorkDetail() {
+      console.log(this.workDetail)
     }
   }
 })
