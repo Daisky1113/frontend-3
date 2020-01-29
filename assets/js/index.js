@@ -14,7 +14,9 @@ firebase.initializeApp(firebaseConfig);
 const vm = new Vue({
   el: '#app',
   data: {
-    projectName: 'Frontend#3'
+    projectName: 'Frontend#3',
+    iconClassName: 'fa-vote-yea',
+    iconText: 'vote'
   },
 
   created(){

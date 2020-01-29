@@ -18,7 +18,9 @@
       <a href="" class="navbar-brand">{{ projectName }}<span></span></a>
       <ul class="nav justify-content-end">
         <li class="nav-item global">
-          <a class="nav-link" href="#"><i class="fas fa-vote-yea"></i><span>vote</span></a>
+          <a class="nav-link" href="#">
+            <i class="fas" v-bind:class="iconClassName"></i>
+            <span>{{ iconText }}</span></a>
         </li>
         <li class="nav-item global">
           <a class="nav-link" href="#"><i class="fas fa-list-ol"></i><span>list</span></a>
