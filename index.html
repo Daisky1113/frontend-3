@@ -35,7 +35,7 @@
     -------------------------->
     <div class="container">
       <div class="row">
-        <div class="text-dark rounded mb-4 modal-in-box product-info-box col-lg-3">
+        <div v-for="member in members" v-bind:key="member.name + member.id" class="text-dark rounded mb-4 modal-in-box product-info-box col-lg-3">
           <div class="info-detail u-box-shadow-sm bg-white text-center rounded p-4 product-card">
             <figure class="mb-2"><img src="./assets/img/img0.jpg" alt="" class="img-fluid  rounded-circle mt-1">
             </figure>
