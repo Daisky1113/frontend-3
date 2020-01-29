@@ -40,6 +40,8 @@ const vm = new Vue({
     ],
     members: data,
     currentMemberId: 0,
+    currentMemberTecPoint: 3,
+    currentMemberServicePoint: 3,
     isModal: false
   },
 
