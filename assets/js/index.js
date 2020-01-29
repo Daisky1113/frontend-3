@@ -15,8 +15,28 @@ const vm = new Vue({
   el: '#app',
   data: {
     projectName: 'Frontend#3',
-    iconClassName: 'fa-vote-yea',
-    iconText: 'vote'
+    icons: [
+      {
+        className: 'fa-vote-yea',
+        text: 'vote'
+      },
+      {
+        className: 'fa-list-ol',
+        text: 'list'
+      },
+      {
+        className: 'fa-id-card',
+        text: 'detail'
+      },
+      {
+        className: 'fa-user-edit',
+        text: 'edit'
+      },
+      {
+        className: 'fa-door-open',
+        text: 'logout'
+      },
+    ],
   },
 
   created(){
