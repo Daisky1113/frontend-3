@@ -39,7 +39,8 @@ const vm = new Vue({
       },
     ],
     members: data,
-    currentMemberId:0,
+    currentMemberId: 0,
+    isModal: false
   },
 
   created(){
