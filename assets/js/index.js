@@ -38,6 +38,7 @@ const vm = new Vue({
         text: 'logout'
       },
     ],
+    members: data,
   },
 
   created(){
