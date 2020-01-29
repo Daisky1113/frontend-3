@@ -64,5 +64,8 @@ const vm = new Vue({
       this.currentMemberId = e.currentTarget.getAttribute('data-member-id')
       this.isModal = true
     },
+    closeModal() {
+      this.isModal = false
+    }
   }
 })
