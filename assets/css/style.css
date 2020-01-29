@@ -1,0 +1,417 @@
+/* ------------------------------------------------------*/
+/* global
+/* -----------------------------------------------------*/
+.fas.fa-pencil-alt{
+  cursor: pointer;
+}
+
+.container{
+  padding-top: 100px !important;
+}
+
+.u-box-shadow-sm {
+  box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
+}
+
+.u-box-shadow-lg {
+  box-shadow: 0 0.4rem 2.2rem 0 rgba(27, 30, 36, 0.1);
+}
+
+/* ------------------------------------------------------*/
+/* animation
+/* ------------------------------------------------------*/
+/* 途中 */
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity .16s;
+}
+
+/* 開始時 */
+.fade-enter{
+  opacity: 0;
+}
+
+.fade-leave{
+  opacity: 1;
+}
+
+/* 終了時 */
+.fade-enter-to{
+  opacity: 1;
+}
+
+.fade-leave-to{
+  opacity: 0;
+}
+
+/* ------------------------------------------------------*/
+/* header
+/* ------------------------------------------------------*/
+.navbar{
+  padding: .5rem 1rem;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1;
+  width: 100%;
+}
+.navbar .navbar-brand span{
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.nav-item.global{
+  color: #999;
+}
+
+.nav-item.global > a{
+  display: flex;
+  flex-flow: column;
+  color: inherit;
+  /* align-items: baseline; */
+}
+
+.nav-item.global > a i{
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav-item.global > a span{
+  font-size: 10px;
+  text-align: center;
+}
+
+.nav-item.global > a {
+  transition: .3s;
+}
+
+.nav-item.global > a:hover{
+  color:#fff;
+}
+
+.nav-item.active{
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------*/
+/* login
+/* ------------------------------------------------------*/
+
+.card-header form-title{
+  font-size: 16px;
+}
+.card.form-wrapper{
+  padding: 0;
+}
+
+.card.form-wrapper label span{
+  margin-left: 8px;
+}
+
+/* ------------------------------------------------------*/
+/* list
+/* -----------------------------------------------------*/
+.result-table-wrapper{}
+
+.result-table-wrapper td figure{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.result-table-wrapper td span.user-name{
+  font-size: 16px;
+}
+.result-table-wrapper td figure img{
+  width: 100%;
+  height: auto;
+}
+/* ------------------------------------------------------*/
+/* detail
+/* -----------------------------------------------------*/
+
+.detail *{
+  box-sizing: border-box;
+}
+.detail .list-group figure{
+  margin-bottom: 0;
+  width: 30px;
+  height: auto;
+}
+
+.detail .list-group{
+  height: 85vh;
+  overflow: scroll;
+  padding-right: 0;
+  border: 1px solid rgba(0,0,0,.08);
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-right: none;
+}
+.detail .list-group-item{
+  align-items: center;
+  border-right: none;
+  cursor: pointer;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: none;
+  background-color: rgb(52, 58, 64);
+  color: #ccc;
+  transition:.2s;
+}
+
+.detail .list-group-item.selected{
+  color: #212529;
+  background-color: #fff;
+}
+
+.list-group-item + .list-group-item {
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+
+
+.detail .list-group-item p{
+  margin-bottom: 0;
+  margin-left: 16px;
+}
+
+.detail .list-group-item p span.entry{
+  font-size: 10px;
+  display: block;
+}
+
+.detail .list-group-item p span.name{
+  font-size: 14px;
+}
+
+.detail .panel-area{
+  border: 1px solid rgba(0,0,0,.08);
+  border-right: none;
+  padding: 16px;
+  position: relative;
+}
+
+
+.detail .panel-area .detail-area{
+  height: 80vh;
+  overflow: scroll;
+}
+
+.detail .panel-area .title{
+
+}
+
+.detail .panel-area .title span{
+  display: block;
+}
+
+.detail .panel-area  span.subtitle{
+  font-size: 12px;
+}
+
+.detail .panel-area .title span.name{
+  font-size: 24px;
+}
+
+.detail .panel-area button{
+  display: block;
+  margin-left: auto;
+}
+
+.detail .panel-area .input-group{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(255,255,255,.9);
+}
+
+
+
+.detail .comment-area{
+  border: 1px solid rgba(0,0,0,.08);
+  border-bottom-right-radius: .25rem;
+  border-top-right-radius: .25rem;
+  position: relative;
+  padding: 16px;
+  height: 85vh;
+  overflow: scroll;
+}
+
+.detail .comment-area .comment{
+  align-items: flex-end;
+  margin-bottom: 16px;
+
+}
+
+.detail .comment-area .text-wrapp{
+  text-align: right;
+}
+
+
+
+.detail .comment-area .text-wrapp p{
+  margin-bottom: 0;
+  background-color: #eaeaea;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.detail .comment-area .text-wrapp p:before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #eaeaea;
+  transform: rotate(-90deg);
+  z-index: -1;
+}
+
+
+
+.detail .comment-area figure{
+  flex-basis: 36px;
+  margin-bottom: 0;
+  margin-left: 16px;
+}
+
+.detail .comment-area span.name{
+  font-size: 10px;
+  color: #999;
+  display: block;
+}
+
+/* ------------------------------------------------------*/
+/* edit
+/* ------------------------------------------------------*/
+.edit{}
+.edit label i{
+  margin-right: 8px;
+}
+
+.edit
+.edit .text-wrapp {
+  
+}
+
+.edit .str-counter{
+  padding-top: 4px;
+  font-size: 12px;
+  display: block;
+  color: #999;
+  text-align: right;
+}
+
+.edit .btn{
+
+}
+
+/* ------------------------------------------------------*/
+/* modal
+/* ------------------------------------------------------*/
+
+.v-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+
+.v-modal .modal-in-box {
+  width: 50%;
+  padding: 1.2rem;
+  background-color: #ffffff;
+}
+
+@media (max-width: 576px) {
+
+
+  .v-modal .modal-in-box {
+    width: 96%;
+  }
+}
+
+.info-area {
+  align-items: center;
+}
+
+
+.controller-area {
+  padding-left: 14px;
+}
+
+.form-check {
+  display: flex;
+  justify-content: end;
+}
+
+.form-check>span {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.form-check .title {
+  width: 140px;
+}
+
+@media (max-width: 576px) {
+  .form-check .title {
+    width: 100px;
+  }
+
+  .form-check>span {
+    padding-left: 10px;
+  }
+
+  .v-modal figure {
+    display: none;
+  }
+
+  .controller-area {
+    padding-left: 0px;
+    margin-bottom: 12px;
+  }
+
+  .v-model button {}
+
+}
+
+.container{
+  position: relative;
+  padding: 0;
+}
+
+.container .my-table{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btn-wrapper button{
+  margin: 0 6px;
+}

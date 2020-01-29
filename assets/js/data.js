@@ -1,0 +1,160 @@
+(function(){
+  window.data = [
+    {
+      id: 0,
+      name: "Daisky",
+      tecPoint: 3,
+      servicePoint: 3,
+  },
+  {
+    id: 1,
+    name: "青木 洋輔",
+    tecPoint: 3,
+    servicePoint: 3,
+  },
+  {
+    id: 2,
+    name: "赤岸叶恵",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 3,
+    name: "安養寺 遥",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 4,
+    name: "飯田 智",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 5,
+    name: "梶村 律太",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 6,
+    name: "加藤クララケビン",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 7,
+    name: "川邉 拓哉",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 8,
+    name: "窪田優人",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 9,
+    name: "佐藤 智哉",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 10,
+    name: "杉本 雄太",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 11,
+    name: "崔 賀英",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 12,
+    name: "辻 志穂里",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 13,
+    name: "内藤由希子",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 14,
+    name: "中村クリストファー",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 15,
+    name: "Mayo Nakamura",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 16,
+    name: "櫨元航太",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 17,
+    name: "東野誉",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 19,
+    name: "松尾 圭介",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 20,
+    name: "三嶋弘哉",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 21,
+    name: "宮澤 賢大",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 22,
+    name: "宮本 一成",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 23,
+    name: "山本 洋子",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 24,
+    name: "今林 智宏",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 25,
+    name: "青木 遊",
+    tecPoint:3,
+    servicePoint:3,
+  },
+  {
+    id: 26,
+    name: "岩埼 ブライアン 海聡",
+    tecPoint:3,
+    servicePoint:3,
+  }
+]
+})()
