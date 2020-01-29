@@ -98,12 +98,16 @@ const vm = new Vue({
       this.currentMemberData.servicePoint = this.currentMemberServicePoint
       // todo firebaseへ送信する処理
       this.closeModal()
+      this.saveLocal()
     },
     closeModal() {
       this.isModal = false
     },
     sendWorkDetail() {
       console.log(this.workDetail)
+    },
+    saveLocal() {
+      localStorage.setItem(this.localStrageKey,JSON.stringify(this.members))
     }
   }
 })
