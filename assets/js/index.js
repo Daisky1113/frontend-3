@@ -55,7 +55,9 @@ const vm = new Vue({
   },
 
   created(){
-    
+    localStorage.getItem(this.localStrageKey)
+      ? this.members = JSON.parse(localStorage.getItem(this.localStrageKey))
+      : this.members = data
   },
 
   computed: {
@@ -108,6 +110,6 @@ const vm = new Vue({
     },
     saveLocal() {
       localStorage.setItem(this.localStrageKey,JSON.stringify(this.members))
-    }
+    },
   }
 })
