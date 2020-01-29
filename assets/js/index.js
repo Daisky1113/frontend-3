@@ -62,7 +62,7 @@ const vm = new Vue({
     },
     preVote(e) {
       this.currentMemberId = e.currentTarget.getAttribute('data-member-id')
-      console.log(this.currentMemberId)
-    }
+      this.isModal = true
+    },
   }
 })
