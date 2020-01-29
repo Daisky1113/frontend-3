@@ -54,9 +54,9 @@
   <div id="js-modal" class="v-modal"　v-if="isModal">
     <div class="text-dark shadow rounded mb-7 modal-in-box">
         <div class="info-area d-flex">
-          <figure class="mb-2"><img src="./assets/img/img0.jpg" alt="" class=" img-fluid  rounded-circle mt-1"></figure>
+          <figure class="mb-2"><img :src="'./assets/img/img' + currentMemberData.id + '.jpg'" alt="" class=" img-fluid  rounded-circle mt-1"></figure>
           <div class="controller-area">
-            <h3>Daisky</h3>
+            <h3>{{ currentMemberData.name }}</h3>
             <div class="form-check form-check-inline"><span class="title">技術点</span>
             <span>
               <input type="radio" name="tecPoint"  value="1" class="form-check-input">
