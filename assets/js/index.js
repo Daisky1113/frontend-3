@@ -59,6 +59,15 @@ const vm = new Vue({
   computed: {
     currentMemberData: function() {
       return this.members.find(member => member.id == this.currentMemberId)
+    },
+    tecInventionLength: function () {
+      return this.workDetail.techInvention.length
+    },
+    serviceInventionLength: function () {
+      return this.workDetail.serviceInvention.length
+    },
+    improvementLength: function () {
+      return this.workDetail.improvement.length
     }
   },
 
