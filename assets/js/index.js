@@ -15,6 +15,7 @@ const vm = new Vue({
   el: '#app',
   data: {
     projectName: 'Frontend#3',
+    localStrageKey: 'memberData',
     activePageName: 'vote',
     icons: [
       {
@@ -54,7 +55,9 @@ const vm = new Vue({
   },
 
   created(){
-    
+    localStorage.getItem(this.localStrageKey)
+      ? this.members = JSON.parse(localStorage.getItem(this.localStrageKey))
+      : this.members = data
   },
 
   computed: {
@@ -97,12 +100,16 @@ const vm = new Vue({
       this.currentMemberData.servicePoint = this.currentMemberServicePoint
       // todo firebaseへ送信する処理
       this.closeModal()
+      this.saveLocal()
     },
     closeModal() {
       this.isModal = false
     },
     sendWorkDetail() {
       console.log(this.workDetail)
-    }
+    },
+    saveLocal() {
+      localStorage.setItem(this.localStrageKey,JSON.stringify(this.members))
+    },
   }
 })
