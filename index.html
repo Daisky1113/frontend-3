@@ -33,7 +33,7 @@
     <!-------------------------
       vote 
     -------------------------->
-    <div class="container">
+    <div v-if="activePageName == 'vote'"class="container">
       <div class="row">
         <div v-for="member in members" v-bind:key="member.name + member.id" class="text-dark rounded mb-4 modal-in-box product-info-box col-lg-3">
           <div class="info-detail u-box-shadow-sm bg-white text-center rounded p-4 product-card">
@@ -48,6 +48,41 @@
         </div>
       </div>
     </div>
+    <!-------------------------
+      list 
+    -------------------------->    
+    <div v-else-if="activePageName == 'list'"class="container result-table-wrapper" >
+      <div class="row">
+        <div class="col">
+          <table class="table table-striped result-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">tec</th>
+                <th scope="col">service</th>
+                <th scope="col">edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="member in members" v-bind:key="member.name + member.id">
+                <th scope="row">{{ member.id }}</th>
+                <td class="d-flex align-items-center">
+                  <figure><img v-bind:src="'./assets/img/img' + member.id + '.jpg'" alt=""></figure>
+                  <span class="user-name">{{ member.name }}</span>
+                </td>
+                <td>{{ member.tecPoint | numberToRate}}</td>
+                <td>{{ member.servicePoint | numberToRate }}</td>
+                <td><i　
+                  v-bind:data-member-id="member.id"
+                  v-on:click="preVote($event)"
+                  class="fas fa-pencil-alt"></i　:></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>    
 <!------------------------------------------ 
   modal
  ------------------------------------------>
