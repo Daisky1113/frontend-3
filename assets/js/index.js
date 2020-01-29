@@ -42,7 +42,14 @@ const vm = new Vue({
     currentMemberId: 0,
     currentMemberTecPoint: 3,
     currentMemberServicePoint: 3,
-    isModal: false
+    isModal: false,
+    workDetail: {
+      url: '',
+      github: '',
+      techInvention: '',
+      serviceInvention: '',
+      improvement: '',
+    }
   },
 
   created(){
