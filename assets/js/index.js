@@ -69,6 +69,9 @@ const vm = new Vue({
     },
     improvementLength: function () {
       return this.workDetail.improvement.length
+    },
+    textLengthStatus: function () {
+      return [this.tecInventionLength,this.serviceInventionLength,this.improvementLength].some(strLength => strLength > this.maxLength)
     }
   },
 
