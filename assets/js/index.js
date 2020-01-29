@@ -15,6 +15,7 @@ const vm = new Vue({
   el: '#app',
   data: {
     projectName: 'Frontend#3',
+    activePageName: 'vote',
     icons: [
       {
         className: 'fa-vote-yea',
