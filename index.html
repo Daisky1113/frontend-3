@@ -17,7 +17,13 @@
     <header class="navbar navbar-dark bg-dark flex-column flex-md-row shadow mb-5">
       <a href="" class="navbar-brand">{{ projectName }}<span></span></a>
       <ul class="nav justify-content-end">
-        <li class="nav-item global" :class="{ active: activePageName === icon.text}" v-for="icon in icons" v-bind:key="icon.className + icon.text">
+        <li class="nav-item global" 
+          :class="{ active: activePageName === icon.text}"
+          v-for="icon in icons"
+          v-bind:key="icon.className + icon.text"
+          v-bind:data-icon-text ="icon.text"
+          v-on:click.stop="navClick($event)"
+        >
           <a class="nav-link" href="#">
             <i class="fas" v-bind:class="icon.className"></i>
             <span>{{ icon.text }}</span></a>

@@ -53,6 +53,9 @@ const vm = new Vue({
   },
 
   methods: {
-    
+    navClick(e) {
+      this.activePageName = e.currentTarget.getAttribute('data-icon-text')
+      console.log(this.activePageName)
+    }
   }
 })
