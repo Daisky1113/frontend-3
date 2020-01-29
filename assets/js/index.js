@@ -56,7 +56,9 @@ const vm = new Vue({
   },
 
   filters: {
-
+    numberToRate: function (number) {
+      return ['S','A','B','C','D'][number - 1]
+    }
   },
 
   methods: {
