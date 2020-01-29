@@ -39,7 +39,10 @@ const vm = new Vue({
       },
     ],
     members: data,
-    currentMemberId:0,
+    currentMemberId: 0,
+    currentMemberTecPoint: 3,
+    currentMemberServicePoint: 3,
+    isModal: false
   },
 
   created(){
@@ -47,7 +50,9 @@ const vm = new Vue({
   },
 
   computed: {
-    
+    currentMemberData: function() {
+      return this.members.find(member => member.id == this.currentMemberId)
+    }
   },
 
   filters: {
@@ -61,7 +66,18 @@ const vm = new Vue({
     },
     preVote(e) {
       this.currentMemberId = e.currentTarget.getAttribute('data-member-id')
-      console.log(this.currentMemberId)
+      this.currentMemberTecPoint = this.currentMemberData.tecPoint
+      this.currentMemberServicePoint = this.currentMemberData.servicePoint
+      this.isModal = true
+    },
+    vote() {
+      this.currentMemberData.tecPoint = this.currentMemberTecPoint
+      this.currentMemberData.servicePoint = this.currentMemberServicePoint
+      // todo firebaseへ送信する処理
+      this.closeModal()
+    },
+    closeModal() {
+      this.isModal = false
     }
   }
 })
