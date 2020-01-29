@@ -70,6 +70,12 @@ const vm = new Vue({
       this.currentMemberServicePoint = this.currentMemberData.servicePoint
       this.isModal = true
     },
+    vote() {
+      this.currentMemberData.tecPoint = this.currentMemberTecPoint
+      this.currentMemberData.servicePoint = this.currentMemberServicePoint
+      // todo firebaseへ送信する処理
+      this.closeModal()
+    },
     closeModal() {
       this.isModal = false
     }
