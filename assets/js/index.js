@@ -87,6 +87,9 @@ const vm = new Vue({
     },
     closeModal() {
       this.isModal = false
+    },
+    sendWorkDetail() {
+      console.log(this.workDetail)
     }
   }
 })
