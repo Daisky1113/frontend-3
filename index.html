@@ -33,7 +33,7 @@
     <!-------------------------
       vote 
     -------------------------->
-    <div class="container">
+    <div v-if="activePageName == 'vote'"class="container">
       <div class="row">
         <div v-for="member in members" v-bind:key="member.name + member.id" class="text-dark rounded mb-4 modal-in-box product-info-box col-lg-3">
           <div class="info-detail u-box-shadow-sm bg-white text-center rounded p-4 product-card">
@@ -51,7 +51,7 @@
     <!-------------------------
       list 
     -------------------------->    
-    <div class="container result-table-wrapper" >
+    <div v-else-if="activePageName == 'list'"class="container result-table-wrapper" >
       <div class="row">
         <div class="col">
           <table class="table table-striped result-table">
